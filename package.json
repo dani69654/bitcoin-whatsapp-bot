@@ -1,7 +1,7 @@
 {
   "name": "bitcoin-whatsapp-bot",
   "version": "1.0.0",
-  "description": "A TypeScript bot that sends a daily Bitcoin market recap to your WhatsApp group at 9:00 AM Rome time.",
+  "description": "A bot that sends a daily Bitcoin market recap to your WhatsApp group at 9:00 AM Rome time.",
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",

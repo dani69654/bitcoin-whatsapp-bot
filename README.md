@@ -15,7 +15,7 @@ A TypeScript bot that sends a daily Bitcoin market recap to your WhatsApp group 
 ### 1. Clone the repository
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/dani69654/bitcoin-whatsapp-bot.git
 cd bitcoin-whatsapp-bot
 ```
 
