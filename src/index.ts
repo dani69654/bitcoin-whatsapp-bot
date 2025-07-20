@@ -5,6 +5,13 @@ import { exitWithError } from './lib/process';
 import { btcPriceFetcher, etfDataFetcher, fearGreedIndexFetcher, fetchNetworkData } from './utils/fetch';
 import { writeReport } from './utils/msg';
 import cron from 'node-cron';
+import express from 'express';
+import { env } from './lib/env';
+import routes from './routes';
+import { startHeartbeat } from './utils/beat';
+
+const app = express();
+app.use(routes);
 
 const main = async () => {
   const client = new Client({
@@ -43,7 +50,9 @@ const main = async () => {
           networkData,
         });
 
-        await chat.sendMessage(report);
+        console.log(report);
+
+        //await chat.sendMessage(report);
       },
       {
         timezone: 'Europe/Rome',
@@ -54,6 +63,7 @@ const main = async () => {
   await client.initialize();
 };
 
-main();
-
-export default main;
+app.listen(env.port, () => {
+  console.log(`Server listening on port ${env.port}`);
+  startHeartbeat();
+});

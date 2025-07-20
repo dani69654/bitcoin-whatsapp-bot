@@ -11,4 +11,6 @@ const requireEnv = (env: string) => {
 
 export const env = {
   waGroupName: requireEnv('WA_GROUP_NAME'),
+  port: requireEnv('PORT'),
+  serverUrl: requireEnv('SERVER_URL'),
 };
