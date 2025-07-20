@@ -50,9 +50,7 @@ const main = async () => {
           networkData,
         });
 
-        console.log(report);
-
-        //await chat.sendMessage(report);
+        await chat.sendMessage(report);
       },
       {
         timezone: 'Europe/Rome',
