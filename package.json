@@ -35,7 +35,7 @@
     "bitcoin-etf-data": "^1.0.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
-    "node-cron": "^3.0.3",
+    "node-cron": "3.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "whatsapp-web.js": "^1.31.0",
