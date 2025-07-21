@@ -5,7 +5,9 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "build": "tsc --outDir dist",
+    "start:prod": "node dist/index.js"
   },
   "keywords": [
     "bitcoin",
