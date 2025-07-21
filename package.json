@@ -7,7 +7,7 @@
     "start": "ts-node src/index.ts",
     "fmt": "prettier --write .",
     "build": "tsc --outDir dist",
-    "start:prod": "node dist/index.js"
+    "start:prod": "node --max-old-space-size=128 dist/index.js"
   },
   "keywords": [
     "bitcoin",
