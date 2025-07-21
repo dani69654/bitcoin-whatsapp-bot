@@ -1,5 +1,4 @@
 import { Client, LocalAuth } from 'whatsapp-web.js';
-import qrCode from 'qrcode-terminal';
 import { findGroupChat } from './utils/group';
 import { exitWithError } from './lib/process';
 import { btcPriceFetcher, etfDataFetcher, fearGreedIndexFetcher, fetchNetworkData } from './utils/fetch';
@@ -20,8 +19,6 @@ const main = async () => {
 
   // WA auth
   client.on('qr', (qr) => {
-    qrCode.generate(qr, { small: true });
-    console.log('Scan the QR code with your WhatsApp app');
     console.log('QR:', qr);
   });
 
@@ -63,7 +60,6 @@ const main = async () => {
 };
 
 app.listen(env.port, () => {
-  console.log(`Server listening on port ${env.port}`);
   startHeartbeat();
   main();
 });
