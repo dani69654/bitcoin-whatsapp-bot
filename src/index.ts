@@ -30,9 +30,9 @@ const main = async () => {
       return;
     }
 
-    // Schedule the report every day at 12pm (noon) Rome time
+    // Schedule the report every day at 9am Rome time
     cron.schedule(
-      '0 12 * * *',
+      '0 9 * * *',
       async () => {
         const [etfData, priceData, fearAndGreedData, networkData] = await Promise.all([
           etfDataFetcher().catch(() => null),
