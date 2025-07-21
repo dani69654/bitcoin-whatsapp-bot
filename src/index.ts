@@ -21,9 +21,8 @@ const main = async () => {
   // WA auth
   client.on('qr', (qr) => {
     qrCode.generate(qr, { small: true });
-    console.log('Scan the QR code with your WhatsApp app', {
-      qr,
-    });
+    console.log('Scan the QR code with your WhatsApp app');
+    console.log('QR:', qr);
   });
 
   // Logic
