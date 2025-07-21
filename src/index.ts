@@ -64,4 +64,5 @@ const main = async () => {
 app.listen(env.port, () => {
   console.log(`Server listening on port ${env.port}`);
   startHeartbeat();
+  main();
 });
